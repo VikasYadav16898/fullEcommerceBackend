@@ -78,6 +78,10 @@ const productSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
+  stock: {
+    type: Number,
+    required: [true, "Please add some stock value"],
+  },
   createdAt: {
     type: Date,
     default: Date.now,
